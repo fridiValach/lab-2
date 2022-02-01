@@ -61,38 +61,32 @@ let sectionArray = [
 
 
 
-const Sections = () => {(
+const Sections = () => {
 
-    return <section className="sectionFlex">
-        {
-            sectionArray.map((thisSection) =>
+    return (
+        <section className="sectionFlex">
+            {
+                sectionArray.map(thisSection =>
 
-                /* <Section1
-                    key={thisSection.sectionClass}
-                    sectionTitle={thisSection.sectionTitle}
-                    sectionClass={thisSection.sectionClass}
-                    sectionItem={thisSection.sectionItem} */}
-
-                    thisSection.isSectionItem ? thisSection.sectionItemCom.map((item) =>
-                        <SectionItem1 /> )
-                    : ''
+                    /* <Section1
+                        key={thisSection.sectionClass}
+                        sectionTitle={thisSection.sectionTitle}
+                        sectionClass={thisSection.sectionClass}
+                        sectionItem={thisSection.sectionItem} */
+                    thisSection.isSectionItem ?
+                        thisSection.sectionItemCom.map(item =><SectionItem1 />)
+                        : ''
                 )
-        }
-   ) }
-    </section>
-
-
-    /*  {if (thisSection.isSectionItem)  {thisSection.sectionItemCom.map((item)=>
-          <SectionItem1
-          />)}
-          else      sectionItem={thisSection.sectionItem}*/
-
-
-
-
-
-
-
+            }
+        </section>
+    )
 }
+
+
+
+/*  {if (thisSection.isSectionItem)  {thisSection.sectionItemCom.map((item)=>
+      <SectionItem1
+      />)}
+      else      sectionItem={thisSection.sectionItem}*/
 
 export default Sections;
